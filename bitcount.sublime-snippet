@@ -1,0 +1,16 @@
+<snippet>
+	<content><![CDATA[
+int bitc(int n){
+	int ans = 0;
+	while(n){
+		n = n&(n-1);
+		ans++;
+	}
+	return ans;
+}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>bitc</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

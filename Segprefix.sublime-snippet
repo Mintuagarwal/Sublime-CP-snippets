@@ -1,0 +1,38 @@
+<snippet>
+	<content><![CDATA[
+const int N = 100100;
+int arr[N], tree[4*N];
+#define mid (l+r)/2
+void build(int index, int l, int r){
+    if(l==r){
+        tree[index]=arr[l];
+        return;
+    }
+    build(index<<1, l, mid);
+    build(index<<1 | 1, mid+1, r);
+    tree[index]=tree[index<<1] + tree[index<<1 | 1];
+}
+void update(int index, int l, int r, int pos, int val){
+    if(l > pos or r < pos)return;
+    if(l==r){
+        arr[l]=val;
+        tree[index]=arr[l];
+        return;
+    }
+    update(index<<1, l, mid, pos, val);
+    update(index<<1 | 1, mid+1, r, pos, val);
+    tree[index]=tree[index<<1] + tree[index<<1 | 1];
+}
+int query(int index, int l, int r, int lq, int rq){
+    if(lq > r or l > rq)return 0;
+    if(lq<=l && r<=rq)
+        return tree[index];
+    return query(index<<1, l, mid, lq, rq) + query(index<<1 | 1, mid+1, r, lq, rq);
+}
+#undef mid
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>Segpref</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

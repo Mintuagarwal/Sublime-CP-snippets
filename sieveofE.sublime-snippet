@@ -1,0 +1,15 @@
+<snippet>
+	<content><![CDATA[
+const int N;
+bool isprime[N];//make global
+for(int i=1;i<N;++i)isprime[i]=1;
+	for(int i=4;i<N;i+=2)isprime[i]=0;
+	for(int i=3;i*i<N;i+=2)
+		if(isprime[i])
+			for(int j=i*i;j<N;j+=i)isprime[j]=0;
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>sieve</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

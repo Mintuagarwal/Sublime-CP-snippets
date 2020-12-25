@@ -1,0 +1,12 @@
+<snippet>
+	<content><![CDATA[
+int invfact[N];
+invfact[N-1]=binpow(fact[N-1], M-2);
+for(int i=N-2;i>=0;--i)
+    invfact[i]=(1ll*invfact[i+1]*(i+1))%M;
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>invfact</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

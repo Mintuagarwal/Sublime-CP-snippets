@@ -1,0 +1,16 @@
+<snippet>
+	<content><![CDATA[
+int bin_exp(int a, int b){
+	if(!b)	return 1ll;
+	int temp = bin_exp(a, b>>1ll);
+	temp*=temp;
+	if(b&1)
+		temp*=a;
+	return temp;
+}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<!-- <tabTrigger>_binexp</tabTrigger> -->
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

@@ -1,0 +1,43 @@
+<snippet>
+	<content><![CDATA[
+class BIT{
+public:
+	int* arr;
+	int size;
+	BIT(){
+		int size = 0;
+		arr = nullptr;
+	}
+	BIT(int n){
+		arr = new int[n];
+		for(int i=0;i<n;i++)
+			arr[i] = 0;
+		size = n;
+	}
+	void resize(int n){
+		arr = new int[n];
+		for(int i=0;i<n;i++)
+			arr[i] = 0;
+		size = n;
+	}
+	void update(int u, int val){
+		while(u < size){
+			arr[u] += val;
+			u += (u^(u&(u-1)));
+		}
+	}
+	int query(int u){
+		int sum = 0;
+		while(u){
+			sum += arr[u];
+			u = u&(u-1);
+		}
+		return sum;
+	}
+};
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>BITsim</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

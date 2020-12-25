@@ -1,0 +1,13 @@
+<snippet>
+	<content><![CDATA[
+int NCR(int n, int r){
+    if(r<0 || n<0 || n<r)return 0ll;
+    int val = (1ll*fact[n]*invfact[r])%M;
+    return (1ll*val*invfact[n-r])%M;
+}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<!-- <tabTrigger>NCRval</tabTrigger> -->
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

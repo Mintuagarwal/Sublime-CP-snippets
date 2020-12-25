@@ -1,0 +1,51 @@
+<snippet>
+	<content><![CDATA[
+#include<bits/stdc++.h>
+using namespace std;
+#define int long long
+#define double long double
+typedef vector<int> vi;
+typedef vector<vector<int> > Mat;
+typedef pair<int, int> pi;
+#define IOS ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0)
+#define MP make_pair
+#define eb emplace_back
+#define pb push_back
+#define sz(o) (int)o.size()
+#define fr(i, n) for(int i=0;i<n;++i)
+#define tr(c, it) for(auto it = c.begin();it!=c.end();++it)
+#define all(o) (o).begin(), (o).end()
+#define F first
+#define S second
+#define mset(m, v) memset(m, v, sizeof(m))
+#define debug(a) cerr << #a << ": " << a << ' ';
+#define pr(v) tr(v, it)cout<<*it<<' ';cout<<'\n';
+#define nl cerr<<'\n';
+const string here = "here\n"; const string yes = "YES\n";const string no = "NO\n";
+const int M = 1e9 + 7;const double PI = 2.0*acos(0);
+int binpow(int a, int b){int res=1;for(;b;b>>=1ll){if(b&1)res=(1ll*res*a)%M;a=(1ll*a*a)%M;}return res;}
+
+void pre(){
+	
+}
+void solve(){
+	int n,m,k,i,j,l,r;bool flag;
+	cin>>n;
+	
+}
+int32_t main(){
+	IOS;
+	//clock_t begin = clock();
+	pre();
+	int t,_;cin>>t;_=t;while(t--)//{cout << "Case #" << _ - t << ": ";
+		solve();
+	//}
+	//cerr<<((double)(clock() - begin)/CLOCKS_PER_SEC)<<'\n';
+	return 0;
+}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>tempmain</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>
